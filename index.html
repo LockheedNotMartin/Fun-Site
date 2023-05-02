@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Green Revolution</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff00cc, #333399);
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 8px black;
+      animation: bounce 2s ease infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background: white;
+      color: #ff00cc;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #ff00cc;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    #subtitle {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      animation: fadein 2s ease;
+      text-decoration: none;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Green Revolution</h1>
+    <button>Play</button>
+    <a href="https://replit.com/@LockheedNotMartin/fun-site" id="subtitle">Made by @LockheedNotMartin on Replit</a>
+  </div>
+  <script>
+    const button = document.querySelector('button');
+    const subtitle = document.getElementById('subtitle');
+
+    button.addEventListener('click', () => {
+      alert('Congratulations! You clicked the button!');
+    });
+
+    subtitle.addEventListener('mouseover', () => {
+      subtitle.style.color = '#ff00cc';
+    });
+
+    subtitle.addEventListener('mouseout', () => {
+      subtitle.style.color = 'white';
+    });
+  </script>
+</body>
+
+</html>
